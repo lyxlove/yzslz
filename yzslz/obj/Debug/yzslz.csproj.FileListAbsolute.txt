@@ -1,0 +1,10 @@
+D:\MCode\C#\yzslz\yzslz\bin\Debug\yzslz.exe.config
+D:\MCode\C#\yzslz\yzslz\bin\Debug\yzslz.exe
+D:\MCode\C#\yzslz\yzslz\bin\Debug\yzslz.pdb
+D:\MCode\C#\yzslz\yzslz\obj\Debug\yzslz.csprojResolveAssemblyReference.cache
+D:\MCode\C#\yzslz\yzslz\obj\Debug\yzslz.Form1.resources
+D:\MCode\C#\yzslz\yzslz\obj\Debug\yzslz.Properties.Resources.resources
+D:\MCode\C#\yzslz\yzslz\obj\Debug\yzslz.yzslz_form.LogForm.resources
+D:\MCode\C#\yzslz\yzslz\obj\Debug\yzslz.csproj.GenerateResource.Cache
+D:\MCode\C#\yzslz\yzslz\obj\Debug\yzslz.exe
+D:\MCode\C#\yzslz\yzslz\obj\Debug\yzslz.pdb
