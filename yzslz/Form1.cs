@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using yzslz.yzslz_form;
 
 namespace yzslz
 {
@@ -19,7 +20,13 @@ namespace yzslz
 
         private void btnLog_Click(object sender, EventArgs e)
         {
-            yzslz_form.LogForm form1 = new yzslz_form.LogForm();
+            LogForm form1 = new LogForm();
+            form1.ShowDialog(this);
+        }
+
+        private void btnConnectDB_Click(object sender, EventArgs e)
+        {
+            ConnectDBForm form1 = new ConnectDBForm();
             form1.ShowDialog(this);
         }
     }
