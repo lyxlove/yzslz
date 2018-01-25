@@ -20,8 +20,7 @@ namespace yzslz.yzslz_form
 
 
         private StreamWriter streamWriter;
-
-
+  
         public void WriteTxtLog(string msg)
         {
             StreamWriter sw = null;

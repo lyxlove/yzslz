@@ -12,10 +12,8 @@ namespace yzslz
         {
 
             StreamWriter sw ;
-            string strPath = string.Format(@"{0}\log_{1}.txt", System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop));
-
-
-
+            string strPath = string.Format(@"{0}\log_{1}.txt", System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            
         }
 
         private void CreateLogText(string path)

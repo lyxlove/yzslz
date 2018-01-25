@@ -29,5 +29,11 @@ namespace yzslz
             ConnectDBForm form1 = new ConnectDBForm();
             form1.ShowDialog(this);
         }
+
+        private void btnThread_Click(object sender, EventArgs e)
+        {
+            ThreadForm form1 = new ThreadForm();
+            form1.ShowDialog(this);
+        }
     }
 }
