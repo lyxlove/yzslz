@@ -35,5 +35,17 @@ namespace yzslz
             ThreadForm form1 = new ThreadForm();
             form1.ShowDialog(this);
         }
+
+        private void btnPort_Click(object sender, EventArgs e)
+        {
+            PortForm form = new PortForm();
+            form.ShowDialog(this);
+        }
+
+        private void btnSerialPort_Click(object sender, EventArgs e)
+        {
+            SerialPortForm form = new SerialPortForm();
+            form.ShowDialog(this);
+        }
     }
 }

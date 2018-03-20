@@ -31,14 +31,15 @@
             this.btnLog = new System.Windows.Forms.Button();
             this.btnConnectDB = new System.Windows.Forms.Button();
             this.btnThread = new System.Windows.Forms.Button();
+            this.btnPort = new System.Windows.Forms.Button();
+            this.btnSerialPort = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLog
             // 
-            this.btnLog.Location = new System.Drawing.Point(31, 36);
-            this.btnLog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLog.Location = new System.Drawing.Point(23, 29);
             this.btnLog.Name = "btnLog";
-            this.btnLog.Size = new System.Drawing.Size(100, 29);
+            this.btnLog.Size = new System.Drawing.Size(75, 23);
             this.btnLog.TabIndex = 0;
             this.btnLog.Text = "日志";
             this.btnLog.UseVisualStyleBackColor = true;
@@ -46,10 +47,9 @@
             // 
             // btnConnectDB
             // 
-            this.btnConnectDB.Location = new System.Drawing.Point(31, 89);
-            this.btnConnectDB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConnectDB.Location = new System.Drawing.Point(23, 71);
             this.btnConnectDB.Name = "btnConnectDB";
-            this.btnConnectDB.Size = new System.Drawing.Size(100, 29);
+            this.btnConnectDB.Size = new System.Drawing.Size(75, 23);
             this.btnConnectDB.TabIndex = 1;
             this.btnConnectDB.Text = "数据库链接";
             this.btnConnectDB.UseVisualStyleBackColor = true;
@@ -57,24 +57,44 @@
             // 
             // btnThread
             // 
-            this.btnThread.Location = new System.Drawing.Point(31, 138);
-            this.btnThread.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThread.Location = new System.Drawing.Point(23, 110);
             this.btnThread.Name = "btnThread";
-            this.btnThread.Size = new System.Drawing.Size(100, 29);
+            this.btnThread.Size = new System.Drawing.Size(75, 23);
             this.btnThread.TabIndex = 2;
             this.btnThread.Text = "线程";
             this.btnThread.UseVisualStyleBackColor = true;
             this.btnThread.Click += new System.EventHandler(this.btnThread_Click);
             // 
+            // btnPort
+            // 
+            this.btnPort.Location = new System.Drawing.Point(23, 152);
+            this.btnPort.Name = "btnPort";
+            this.btnPort.Size = new System.Drawing.Size(75, 23);
+            this.btnPort.TabIndex = 3;
+            this.btnPort.Text = "端口测试";
+            this.btnPort.UseVisualStyleBackColor = true;
+            this.btnPort.Click += new System.EventHandler(this.btnPort_Click);
+            // 
+            // btnSerialPort
+            // 
+            this.btnSerialPort.Location = new System.Drawing.Point(23, 196);
+            this.btnSerialPort.Name = "btnSerialPort";
+            this.btnSerialPort.Size = new System.Drawing.Size(75, 23);
+            this.btnSerialPort.TabIndex = 4;
+            this.btnSerialPort.Text = "串口测试";
+            this.btnSerialPort.UseVisualStyleBackColor = true;
+            this.btnSerialPort.Click += new System.EventHandler(this.btnSerialPort_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 484);
+            this.ClientSize = new System.Drawing.Size(491, 387);
+            this.Controls.Add(this.btnSerialPort);
+            this.Controls.Add(this.btnPort);
             this.Controls.Add(this.btnThread);
             this.Controls.Add(this.btnConnectDB);
             this.Controls.Add(this.btnLog);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -86,6 +106,8 @@
         private System.Windows.Forms.Button btnLog;
         private System.Windows.Forms.Button btnConnectDB;
         private System.Windows.Forms.Button btnThread;
+        private System.Windows.Forms.Button btnPort;
+        private System.Windows.Forms.Button btnSerialPort;
     }
 }
 
