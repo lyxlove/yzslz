@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using yzslz.yzslz_form;
+using YDLL;
+using System.Data.SqlClient;
 
 namespace yzslz
 {
@@ -16,6 +18,7 @@ namespace yzslz
         public Form1()
         {
             InitializeComponent();
+       
         }
 
         private void btnLog_Click(object sender, EventArgs e)
@@ -46,6 +49,12 @@ namespace yzslz
         {
             SerialPortForm form = new SerialPortForm();
             form.ShowDialog(this);
+        }
+
+        private void btnDBTest_Click(object sender, EventArgs e)
+        {
+           // DBTestForm form = new DBTestForm();
+           // form.ShowDialog(this);
         }
     }
 }

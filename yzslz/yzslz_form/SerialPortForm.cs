@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
+using System.IO.Ports;
 using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace yzslz.yzslz_form
@@ -16,6 +16,7 @@ namespace yzslz.yzslz_form
         public SerialPortForm()
         {
             InitializeComponent();
+            InitComb();
         }
 
 
@@ -27,11 +28,13 @@ namespace yzslz.yzslz_form
                 if (keycomm != null)
                 {
                     string[] ssubkeycomm = keycomm.GetValueNames();
-                    combSerialPort.Items.Clear();
+                    combSerialPortOne.Items.Clear();
                     foreach (string skey in ssubkeycomm)
                     {
                         string svalue = Convert.ToString(keycomm.GetValue(skey));
-                        combSerialPort.Items.Add(svalue);
+                        combSerialPortOne.Items.Add(svalue);
+                        combSerialPortTwo.Items.Add(svalue);
+
                     }
                 }
             }
@@ -43,29 +46,63 @@ namespace yzslz.yzslz_form
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-            if (btnOpen.Text.Equals("打开串口"))
+            if (btnOpenPortOne.Text.Equals("打开串口"))
             {
                 if (serialPort1.IsOpen) serialPort1.Close();
-                serialPort1.PortName = combSerialPort.Text.Trim();
+                serialPort1.PortName = combSerialPortOne.Text.Trim();
                 try
                 {
                     serialPort1.Open();
-                    //toolStripStatusLabel1.Text = combSerialPort.Text + "串口打开";
-                    btnOpen.Text = "关闭串口";
+                    btnOpenPortOne.Text = "关闭串口";
 
                 }
-                catch
+                catch(Exception ex)
                 {
-                   // toolStripStatusLabel1.Text = "端口打开时出现错误";
+                    MessageBox.Show(ex.Message);
                 }
             }
             else
             {
                 serialPort1.Close();
-                //toolStripStatusLabel1.Text = "当前串口关闭";
-                btnOpen.Text = "打开串口";
+                btnOpenPortOne.Text = "打开串口";
             }
         }
 
+        private void btnOpenPortTwo_Click(object sender, EventArgs e)
+        {
+            if (btnOpenPortTwo.Text.Equals("打开串口"))
+            {
+                if (serialPort2.IsOpen) serialPort2.Close();
+                serialPort2.PortName = combSerialPortTwo.Text.Trim();
+                try
+                {
+                    serialPort2.Open();
+                    btnOpenPortTwo.Text = "关闭串口";
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                serialPort2.Close();
+                btnOpenPortTwo.Text = "打开串口";
+            }
+        }
+
+        private void serialPort2_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
+        {
+            SerialPort obj = (SerialPort)sender;
+            string strData = obj.ReadExisting();
+            txtReceiveContent.Text = strData;
+
+        }
+
+        private void btnProtOneSend_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write(txtSendContent.Text.Trim());
+        }
     }
 }

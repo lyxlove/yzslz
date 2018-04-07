@@ -33,6 +33,8 @@
             this.btnThread = new System.Windows.Forms.Button();
             this.btnPort = new System.Windows.Forms.Button();
             this.btnSerialPort = new System.Windows.Forms.Button();
+            this.btnDBTest = new System.Windows.Forms.Button();
+            this.txtWithLab1 = new yzslz.Tools.TxtWithLab();
             this.SuspendLayout();
             // 
             // btnLog
@@ -85,11 +87,30 @@
             this.btnSerialPort.UseVisualStyleBackColor = true;
             this.btnSerialPort.Click += new System.EventHandler(this.btnSerialPort_Click);
             // 
+            // btnDBTest
+            // 
+            this.btnDBTest.Location = new System.Drawing.Point(23, 237);
+            this.btnDBTest.Name = "btnDBTest";
+            this.btnDBTest.Size = new System.Drawing.Size(75, 23);
+            this.btnDBTest.TabIndex = 5;
+            this.btnDBTest.Text = "数据库测试";
+            this.btnDBTest.UseVisualStyleBackColor = true;
+            this.btnDBTest.Click += new System.EventHandler(this.btnDBTest_Click);
+            // 
+            // txtWithLab1
+            // 
+            this.txtWithLab1.Location = new System.Drawing.Point(244, 97);
+            this.txtWithLab1.Name = "txtWithLab1";
+            this.txtWithLab1.Size = new System.Drawing.Size(246, 22);
+            this.txtWithLab1.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 387);
+            this.ClientSize = new System.Drawing.Size(531, 410);
+            this.Controls.Add(this.txtWithLab1);
+            this.Controls.Add(this.btnDBTest);
             this.Controls.Add(this.btnSerialPort);
             this.Controls.Add(this.btnPort);
             this.Controls.Add(this.btnThread);
@@ -108,6 +129,8 @@
         private System.Windows.Forms.Button btnThread;
         private System.Windows.Forms.Button btnPort;
         private System.Windows.Forms.Button btnSerialPort;
+        private System.Windows.Forms.Button btnDBTest;
+        private Tools.TxtWithLab txtWithLab1;
     }
 }
 
