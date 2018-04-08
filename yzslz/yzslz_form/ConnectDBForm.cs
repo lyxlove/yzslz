@@ -4,9 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
+
 using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace yzslz.yzslz_form
@@ -23,12 +23,14 @@ namespace yzslz.yzslz_form
             SqlConnection conn = new SqlConnection();
             try
             {
-                string ConnetionStr = "server=.\\SQLEXPRESS;" +
+                string ConnetionStr = "server=.;" +
                                       "integrated security=SSPI;" +
-                                      "database=IVS30";
-          
+                                      "database=IVS_BJXY";
+
                 conn.ConnectionString = ConnetionStr;
                 conn.Open();
+                SqlCommand sqlCommand = new SqlCommand("", conn);
+                NewMethod(sqlCommand);
             }
             catch (Exception ex)
             {
@@ -41,6 +43,11 @@ namespace yzslz.yzslz_form
                         
                                   
 
+        }
+
+        private static void NewMethod(SqlCommand sqlCommand)
+        {
+            sqlCommand.ExecuteNonQuery();
         }
     }
 }
