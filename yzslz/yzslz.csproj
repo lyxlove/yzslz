@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{08502794-CE3A-421F-A34F-05DE1A0C128D}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>yzslz</RootNamespace>
     <AssemblyName>yzslz</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -34,9 +34,22 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,6 +70,103 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\BGD_SUGGEST.cs" />
+    <Compile Include="Model\CALIB_CONFIG.cs" />
+    <Compile Include="Model\CALIB_DATA.cs" />
+    <Compile Include="Model\CALIB_LOG.cs" />
+    <Compile Include="Model\CAMERA_INFO.cs" />
+    <Compile Include="Model\CASH_CAHARE_TOTALSTD.cs" />
+    <Compile Include="Model\CASH_CHARGE_CHECKIN.cs" />
+    <Compile Include="Model\CASH_CHARGE_DETAILED.cs" />
+    <Compile Include="Model\CHARGE_INFO.cs" />
+    <Compile Include="Model\CONST_DEFINE.cs" />
+    <Compile Include="Model\CONST_DEFINE_WEB.cs" />
+    <Compile Include="Model\CONST_DEFINE_WEB_CATEGORY.cs" />
+    <Compile Include="Model\DATA_DB_VERSION.cs" />
+    <Compile Include="Model\DEV_INFO.cs" />
+    <Compile Include="Model\DEV_MaintenanceRecord.cs" />
+    <Compile Include="Model\DEV_STANDARD_ASM.cs" />
+    <Compile Include="Model\DEV_STANDARD_BRAKE.cs" />
+    <Compile Include="Model\DEV_STANDARD_BRAKE_ZJ.cs" />
+    <Compile Include="Model\DEV_STANDARD_CLASS.cs" />
+    <Compile Include="Model\DEV_STANDARD_DPCG.cs" />
+    <Compile Include="Model\DEV_STANDARD_DPCG_NEW.cs" />
+    <Compile Include="Model\DEV_STANDARD_KERBMASS.cs" />
+    <Compile Include="Model\DEV_STANDARD_LAMP.cs" />
+    <Compile Include="Model\DEV_STANDARD_LAMP_ZJ.cs" />
+    <Compile Include="Model\DEV_STANDARD_LD.cs" />
+    <Compile Include="Model\DEV_STANDARD_NOSIZE.cs" />
+    <Compile Include="Model\DEV_STANDARD_SDS.cs" />
+    <Compile Include="Model\DEV_STANDARD_SIDESLIP.cs" />
+    <Compile Include="Model\DEV_STANDARD_SPEAKER.cs" />
+    <Compile Include="Model\DEV_STANDARD_SPEED.cs" />
+    <Compile Include="Model\DEV_STANDARD_SUSPENSION.cs" />
+    <Compile Include="Model\DEV_STANDARD_TAXI_MILEAGE.cs" />
+    <Compile Include="Model\DEV_STANDARD_VMAS.cs" />
+    <Compile Include="Model\DEV_STANDARD_ZYJS.cs" />
+    <Compile Include="Model\EMPLOYEE_USER.cs" />
+    <Compile Include="Model\GA_JYJG_BAXXBA.cs" />
+    <Compile Include="Model\GA_JYJG_GZRYGLXXBA.cs" />
+    <Compile Include="Model\GA_JYYXX_BAJG.cs" />
+    <Compile Include="Model\GB_SMOKE_STANDAR.cs" />
+    <Compile Include="Model\INSPECTION_DEV_INFO.cs" />
+    <Compile Include="Model\INSPECTION_DEV_REG_INFO.cs" />
+    <Compile Include="Model\INSPECTION_LINE_INFO.cs" />
+    <Compile Include="Model\INSPECTION_LINE_STYLE.cs" />
+    <Compile Include="Model\INSPECTION_STATION_INFO.cs" />
+    <Compile Include="Model\LOGIN_VEHICLE_INFO.cs" />
+    <Compile Include="Model\LOG_INFO.cs" />
+    <Compile Include="Model\NET_AJ_JK_RESULT.cs" />
+    <Compile Include="Model\NET_JK_RESULT.cs" />
+    <Compile Include="Model\OUTLOOK_CHASISS_SUBITEM.cs" />
+    <Compile Include="Model\PRINT_RECORD.cs" />
+    <Compile Include="Model\PUSH_INSPECT_NO.cs" />
+    <Compile Include="Model\PUSH_LSH_COUNT.cs" />
+    <Compile Include="Model\RESULT_ABS.cs" />
+    <Compile Include="Model\RESULT_ANGLE.cs" />
+    <Compile Include="Model\RESULT_ASM.cs" />
+    <Compile Include="Model\RESULT_BRAKE.cs" />
+    <Compile Include="Model\RESULT_BRAKE_ZJ.cs" />
+    <Compile Include="Model\RESULT_CHASISS_MANUAL.cs" />
+    <Compile Include="Model\RESULT_CHASISS_MANUAL_ZJ.cs" />
+    <Compile Include="Model\RESULT_DOWNLINE.cs" />
+    <Compile Include="Model\RESULT_DOWNLINE_HB.cs" />
+    <Compile Include="Model\RESULT_DPCG.cs" />
+    <Compile Include="Model\RESULT_IMAGE.cs" />
+    <Compile Include="Model\RESULT_KERBMASS.cs" />
+    <Compile Include="Model\RESULT_LAMP.cs" />
+    <Compile Include="Model\RESULT_LAMP_ZJ.cs" />
+    <Compile Include="Model\RESULT_LD.cs" />
+    <Compile Include="Model\RESULT_NOSIZE.cs" />
+    <Compile Include="Model\RESULT_OVERALLSIZE.cs" />
+    <Compile Include="Model\RESULT_PROCESS_LINE.cs" />
+    <Compile Include="Model\RESULT_RECORD.cs" />
+    <Compile Include="Model\RESULT_ROAD.cs" />
+    <Compile Include="Model\RESULT_SDS.cs" />
+    <Compile Include="Model\RESULT_SIDESLIP.cs" />
+    <Compile Include="Model\RESULT_SPEAKER.cs" />
+    <Compile Include="Model\RESULT_SPEED.cs" />
+    <Compile Include="Model\RESULT_SUSPENSION.cs" />
+    <Compile Include="Model\RESULT_TAXI_MILEAGE.cs" />
+    <Compile Include="Model\RESULT_TEMP_DATA.cs" />
+    <Compile Include="Model\RESULT_TOE_IN.cs" />
+    <Compile Include="Model\RESULT_VEHICLE_INFO.cs" />
+    <Compile Include="Model\RESULT_VMAS.cs" />
+    <Compile Include="Model\RESULT_ZYJS.cs" />
+    <Compile Include="Model\SYSTEM_LANGUAGE.cs" />
+    <Compile Include="Model\SYSTEM_MODULE.cs" />
+    <Compile Include="Model\SYSTEM_OPLOG.cs" />
+    <Compile Include="Model\SYSTEM_ROLE_RIGHT.cs" />
+    <Compile Include="Model\TABLE_UNION_CONST.cs" />
+    <Compile Include="Model\TABLE_UNION_ITEM.cs" />
+    <Compile Include="Model\TABLE_UNION_NAME.cs" />
+    <Compile Include="Model\TYPE_CX_CONTENT.cs" />
+    <Compile Include="Model\TYPE_CX_FDJ_UNION.cs" />
+    <Compile Include="Model\TYPE_FDJ_CONTENT.cs" />
+    <Compile Include="Model\VEHICLE_DISPATCH.cs" />
+    <Compile Include="Model\WEB_SERICE_SYSLOG.cs" />
+    <Compile Include="Model\WKY_DATA.cs" />
+    <Compile Include="Model\YModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools\FillTools.cs" />
@@ -156,6 +266,7 @@
     <EmbeddedResource Include="yzslz_form\WebSocketForm.resx">
       <DependentUpon>WebSocketForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

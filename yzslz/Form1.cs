@@ -10,8 +10,7 @@ using System.Windows.Forms;
 using yzslz.yzslz_form;
 using YDLL;
 using System.Data.SqlClient;
-using yzslz_service;
-
+using yzslz.Model;
 namespace yzslz
 {
     public partial class Form1 : Form
@@ -19,9 +18,9 @@ namespace yzslz
         public Form1()
         {
             InitializeComponent();
-            y_service y_Service = new y_service();
-            int  i = y_Service.Add(1,2);
-            
+        
+           
+
         }
 
         private void btnLog_Click(object sender, EventArgs e)
