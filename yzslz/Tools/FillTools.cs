@@ -22,6 +22,19 @@ namespace yzslz.Tools
             return t;
         }
 
+        public static List<T> MyFill<T>()
+        {
+
+            List<T> list = new List<T>();
+
+
+            return list;
+
+
+
+
+        }
+
         public static T FillEntityByDt<T>(DataTable dt) where T : new()
         {
             T t = new T();
