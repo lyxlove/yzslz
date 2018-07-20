@@ -35,6 +35,7 @@
             this.btnSerialPort = new System.Windows.Forms.Button();
             this.btnDBTest = new System.Windows.Forms.Button();
             this.txtWithLab1 = new yzslz.Tools.TxtWithLab();
+            this.btnFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLog
@@ -104,11 +105,22 @@
             this.txtWithLab1.Size = new System.Drawing.Size(246, 22);
             this.txtWithLab1.TabIndex = 6;
             // 
+            // btnFile
+            // 
+            this.btnFile.Location = new System.Drawing.Point(23, 278);
+            this.btnFile.Name = "btnFile";
+            this.btnFile.Size = new System.Drawing.Size(75, 23);
+            this.btnFile.TabIndex = 7;
+            this.btnFile.Text = "文件操作";
+            this.btnFile.UseVisualStyleBackColor = true;
+            this.btnFile.Click += new System.EventHandler(this.btnFile_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 410);
+            this.Controls.Add(this.btnFile);
             this.Controls.Add(this.txtWithLab1);
             this.Controls.Add(this.btnDBTest);
             this.Controls.Add(this.btnSerialPort);
@@ -131,6 +143,7 @@
         private System.Windows.Forms.Button btnSerialPort;
         private System.Windows.Forms.Button btnDBTest;
         private Tools.TxtWithLab txtWithLab1;
+        private System.Windows.Forms.Button btnFile;
     }
 }
 

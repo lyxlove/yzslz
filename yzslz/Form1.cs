@@ -11,6 +11,8 @@ using yzslz.yzslz_form;
 using YDLL;
 using System.Data.SqlClient;
 using yzslz.Model;
+using YZSLZ.SQLDataServer;
+
 namespace yzslz
 {
     public partial class Form1 : Form
@@ -18,7 +20,9 @@ namespace yzslz
         public Form1()
         {
             InitializeComponent();
-        
+            SQLHelper sqlHelper = new SQLHelper();
+            int t = sqlHelper.ExcuteSql("SELECT * FROM  VEHICLE_DISPATCH");
+            MessageBox.Show(t.ToString());
            
 
         }
@@ -57,6 +61,12 @@ namespace yzslz
         {
            // DBTestForm form = new DBTestForm();
            // form.ShowDialog(this);
+        }
+
+        private void btnFile_Click(object sender, EventArgs e)
+        {
+            FileForm fileForm = new FileForm();
+            fileForm.ShowDialog(this);
         }
     }
 }
