@@ -20,9 +20,9 @@ namespace yzslz
         public Form1()
         {
             InitializeComponent();
-            SQLHelper sqlHelper = new SQLHelper();
-            int t = sqlHelper.ExcuteSql("SELECT * FROM  VEHICLE_DISPATCH");
-            MessageBox.Show(t.ToString());
+            //SQLHelper sqlHelper = new SQLHelper();
+            //int t = sqlHelper.ExcuteSql("SELECT * FROM  VEHICLE_DISPATCH");
+            //MessageBox.Show(t.ToString());
            
 
         }
@@ -67,6 +67,12 @@ namespace yzslz
         {
             FileForm fileForm = new FileForm();
             fileForm.ShowDialog(this);
+        }
+
+        private void btnNet_Click(object sender, EventArgs e)
+        {
+            NetTestForm form = new NetTestForm();
+            form.ShowDialog(this);
         }
     }
 }

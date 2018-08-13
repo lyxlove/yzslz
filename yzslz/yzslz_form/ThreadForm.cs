@@ -14,7 +14,7 @@ namespace yzslz.yzslz_form
         {
             Label.CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
-            AsyncStatics();
+            //AsyncStatics();
         }
 
         private void btnMulitRead_Click(object sender, EventArgs e)
@@ -71,5 +71,12 @@ namespace yzslz.yzslz_form
             t3.Abort();
             t3.Join();        
         }
+
+        private void N()
+        {
+
+        }
+
+
     }
 }

@@ -36,6 +36,7 @@
             this.btnDBTest = new System.Windows.Forms.Button();
             this.txtWithLab1 = new yzslz.Tools.TxtWithLab();
             this.btnFile = new System.Windows.Forms.Button();
+            this.btnNet = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLog
@@ -115,11 +116,22 @@
             this.btnFile.UseVisualStyleBackColor = true;
             this.btnFile.Click += new System.EventHandler(this.btnFile_Click);
             // 
+            // btnNet
+            // 
+            this.btnNet.Location = new System.Drawing.Point(23, 316);
+            this.btnNet.Name = "btnNet";
+            this.btnNet.Size = new System.Drawing.Size(75, 23);
+            this.btnNet.TabIndex = 8;
+            this.btnNet.Text = "网络编程";
+            this.btnNet.UseVisualStyleBackColor = true;
+            this.btnNet.Click += new System.EventHandler(this.btnNet_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 410);
+            this.Controls.Add(this.btnNet);
             this.Controls.Add(this.btnFile);
             this.Controls.Add(this.txtWithLab1);
             this.Controls.Add(this.btnDBTest);
@@ -129,6 +141,7 @@
             this.Controls.Add(this.btnConnectDB);
             this.Controls.Add(this.btnLog);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
 
@@ -144,6 +157,7 @@
         private System.Windows.Forms.Button btnDBTest;
         private Tools.TxtWithLab txtWithLab1;
         private System.Windows.Forms.Button btnFile;
+        private System.Windows.Forms.Button btnNet;
     }
 }
 
