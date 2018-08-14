@@ -12,6 +12,7 @@ using YDLL;
 using System.Data.SqlClient;
 using yzslz.Model;
 using YZSLZ.SQLDataServer;
+using System.Threading;
 
 namespace yzslz
 {
@@ -27,9 +28,32 @@ namespace yzslz
 
         }
 
+        private void CatchText( int i = 0)
+        {
+            string k = "";
+            int j = 0;
+            try
+            {
+                j = Convert.ToInt32(k);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"{ex.Message},时间：{DateTime.Now.ToString("hh:MM:ss")}");
+                Thread.Sleep(3000);
+                if (i < 5)
+                {
+                    
+                    CatchText(++i);
+                }
+            }
+            Console.WriteLine($"{i}的错误");
+        }
+
         private void btnLog_Click(object sender, EventArgs e)
         {
-            LogForm form1 = new LogForm();
+            CatchText();
+            return;
+               LogForm form1 = new LogForm();
             form1.ShowDialog(this);
         }
 
@@ -72,6 +96,12 @@ namespace yzslz
         private void btnNet_Click(object sender, EventArgs e)
         {
             NetTestForm form = new NetTestForm();
+            form.ShowDialog(this);
+        }
+
+        private void txtRegx_Click(object sender, EventArgs e)
+        {
+            RegxForm form = new RegxForm();
             form.ShowDialog(this);
         }
     }

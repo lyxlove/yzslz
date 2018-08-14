@@ -193,6 +193,12 @@
     <Compile Include="yzslz_form\ChildForm\TestPortForm.Designer.cs">
       <DependentUpon>TestPortForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="yzslz_form\ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yzslz_form\ConfigForm.Designer.cs">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="yzslz_form\ConnectDBForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,12 @@
     </Compile>
     <Compile Include="yzslz_form\PortForm.Designer.cs">
       <DependentUpon>PortForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yzslz_form\RegxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yzslz_form\RegxForm.Designer.cs">
+      <DependentUpon>RegxForm.cs</DependentUpon>
     </Compile>
     <Compile Include="yzslz_form\SerialPortForm.cs">
       <SubType>Form</SubType>
@@ -264,6 +276,9 @@
     <EmbeddedResource Include="yzslz_form\ChildForm\TestPortForm.resx">
       <DependentUpon>TestPortForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="yzslz_form\ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="yzslz_form\ConnectDBForm.resx">
       <DependentUpon>ConnectDBForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,7 +315,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

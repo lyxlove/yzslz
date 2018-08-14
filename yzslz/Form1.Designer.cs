@@ -34,9 +34,9 @@
             this.btnPort = new System.Windows.Forms.Button();
             this.btnSerialPort = new System.Windows.Forms.Button();
             this.btnDBTest = new System.Windows.Forms.Button();
-            this.txtWithLab1 = new yzslz.Tools.TxtWithLab();
             this.btnFile = new System.Windows.Forms.Button();
             this.btnNet = new System.Windows.Forms.Button();
+            this.txtRegx = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLog
@@ -99,13 +99,6 @@
             this.btnDBTest.UseVisualStyleBackColor = true;
             this.btnDBTest.Click += new System.EventHandler(this.btnDBTest_Click);
             // 
-            // txtWithLab1
-            // 
-            this.txtWithLab1.Location = new System.Drawing.Point(244, 97);
-            this.txtWithLab1.Name = "txtWithLab1";
-            this.txtWithLab1.Size = new System.Drawing.Size(246, 22);
-            this.txtWithLab1.TabIndex = 6;
-            // 
             // btnFile
             // 
             this.btnFile.Location = new System.Drawing.Point(23, 278);
@@ -126,14 +119,24 @@
             this.btnNet.UseVisualStyleBackColor = true;
             this.btnNet.Click += new System.EventHandler(this.btnNet_Click);
             // 
+            // txtRegx
+            // 
+            this.txtRegx.Location = new System.Drawing.Point(127, 29);
+            this.txtRegx.Name = "txtRegx";
+            this.txtRegx.Size = new System.Drawing.Size(75, 23);
+            this.txtRegx.TabIndex = 9;
+            this.txtRegx.Text = "正则";
+            this.txtRegx.UseVisualStyleBackColor = true;
+            this.txtRegx.Click += new System.EventHandler(this.txtRegx_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 410);
+            this.Controls.Add(this.txtRegx);
             this.Controls.Add(this.btnNet);
             this.Controls.Add(this.btnFile);
-            this.Controls.Add(this.txtWithLab1);
             this.Controls.Add(this.btnDBTest);
             this.Controls.Add(this.btnSerialPort);
             this.Controls.Add(this.btnPort);
@@ -155,9 +158,9 @@
         private System.Windows.Forms.Button btnPort;
         private System.Windows.Forms.Button btnSerialPort;
         private System.Windows.Forms.Button btnDBTest;
-        private Tools.TxtWithLab txtWithLab1;
         private System.Windows.Forms.Button btnFile;
         private System.Windows.Forms.Button btnNet;
+        private System.Windows.Forms.Button txtRegx;
     }
 }
 

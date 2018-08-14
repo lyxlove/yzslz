@@ -18,7 +18,6 @@ namespace yzslz.yzslz_form
             InitializeComponent();
         }
 
-
         private StreamWriter streamWriter;
   
         public void WriteTxtLog(string msg)
@@ -47,7 +46,6 @@ namespace yzslz.yzslz_form
             }
         }
 
-
         private void WriteLog(string msg)
         {
             try
@@ -75,7 +73,6 @@ namespace yzslz.yzslz_form
                 }
             }
         }
-
 
         private void btnWriteLog_Click(object sender, EventArgs e)
         {
@@ -122,6 +119,7 @@ namespace yzslz.yzslz_form
         class LogEntity
         {
             private DateTime _logTime;
+
             public DateTime LogTime
             {
                 get
