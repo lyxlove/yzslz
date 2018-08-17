@@ -75,7 +75,7 @@ namespace yzslz.yzslz_form.FRehistry
             string path = Application.ExecutablePath;
             registryKey = Registry.LocalMachine;
             registryKey0 = registryKey.OpenSubKey(_path,true);
-            registryKey0.SetValue("PrintShutdown", path);
+            registryKey0.SetValue("WebAutoPrint ", path);
             registryKey0.Close();
             registryKey.Close();
             lvItem.Items.Clear();
@@ -86,7 +86,7 @@ namespace yzslz.yzslz_form.FRehistry
         {
             RegistryKey rk = Registry.LocalMachine;
             RegistryKey rk2 = rk.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run", true);
-            rk2.DeleteValue("PrintShutdown",false);
+            rk2.DeleteValue("WebAutoPrint", false);
             rk2.Close();
             rk.Close();
             lvItem.Items.Clear();
@@ -95,16 +95,28 @@ namespace yzslz.yzslz_form.FRehistry
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            RegistryKey rk = Registry.LocalMachine;
-            RegistryKey rk2 = rk.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run");
-            if (rk2.GetValueNames().Contains("PrintShutdown"))
+            bool succ = false;
+            registryKey = Registry.LocalMachine;
+            registryKey0 = registryKey.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run");
+            if (registryKey0.GetValueNames().Contains("WebAutoPrint"))
             {
-                MessageBox.Show("包含启动项");
+                succ = true;
+            }
+            registryKey = Registry.CurrentUser;
+            registryKey0 = registryKey.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run");
+            if (registryKey0.GetValueNames().Contains("WebAutoPrint"))
+            {
+                succ = true;
+            }
+            if (succ)
+            {
+                MessageBox.Show("WebAutoPrint是启动项");
             }
             else
             {
-                MessageBox.Show("不是启动项");
+                MessageBox.Show("WebAutoPrint不是启动项");
             }
+
         }
     }
 }
