@@ -13,6 +13,7 @@ using System.Data.SqlClient;
 using yzslz.Model;
 using YZSLZ.SQLDataServer;
 using System.Threading;
+using System.Reflection;
 
 namespace yzslz
 {
@@ -20,6 +21,8 @@ namespace yzslz
     {
         public Form1()
         {
+           // Assembly assembly = Assembly.Load("");
+            //Type type =  assembly.GetType("", false, true);
             InitializeComponent();
             //SQLHelper sqlHelper = new SQLHelper();
             //int t = sqlHelper.ExcuteSql("SELECT * FROM  VEHICLE_DISPATCH");
@@ -28,7 +31,7 @@ namespace yzslz
 
         }
 
-        private void CatchText( int i = 0)
+        public void CatchText( int i = 0)
         {
             string k = "";
             int j = 0;
@@ -103,6 +106,12 @@ namespace yzslz
         {
             RegxForm form = new RegxForm();
             form.ShowDialog(this);
+        }
+
+        private void btnRegistry_Click(object sender, EventArgs e)
+        {
+            RegistryForm registryForm = new RegistryForm();
+            registryForm.ShowDialog(this);
         }
     }
 }

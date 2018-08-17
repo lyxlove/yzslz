@@ -37,6 +37,7 @@
             this.btnFile = new System.Windows.Forms.Button();
             this.btnNet = new System.Windows.Forms.Button();
             this.txtRegx = new System.Windows.Forms.Button();
+            this.btnRegistry = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLog
@@ -129,11 +130,22 @@
             this.txtRegx.UseVisualStyleBackColor = true;
             this.txtRegx.Click += new System.EventHandler(this.txtRegx_Click);
             // 
+            // btnRegistry
+            // 
+            this.btnRegistry.Location = new System.Drawing.Point(127, 71);
+            this.btnRegistry.Name = "btnRegistry";
+            this.btnRegistry.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistry.TabIndex = 10;
+            this.btnRegistry.Text = "注册表";
+            this.btnRegistry.UseVisualStyleBackColor = true;
+            this.btnRegistry.Click += new System.EventHandler(this.btnRegistry_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 410);
+            this.Controls.Add(this.btnRegistry);
             this.Controls.Add(this.txtRegx);
             this.Controls.Add(this.btnNet);
             this.Controls.Add(this.btnFile);
@@ -161,6 +173,7 @@
         private System.Windows.Forms.Button btnFile;
         private System.Windows.Forms.Button btnNet;
         private System.Windows.Forms.Button txtRegx;
+        private System.Windows.Forms.Button btnRegistry;
     }
 }
 
